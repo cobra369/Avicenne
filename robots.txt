@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://cobra369.github.io/sitemap.xml

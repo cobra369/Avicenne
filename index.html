@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Avicenne International Assistance Médicale</title>
+  <meta name="description" content="Avicenne International Assistance Médicale - Services médicaux et esthétiques internationaux personnalisés avec accompagnement complet.">
+
+  <meta property="og:title" content="Avicenne International Assistance Médicale">
+  <meta property="og:site_name" content="Avicenne">
+  <meta property="og:description" content="Services médicaux internationaux, assistance médicale personnalisée, logements, transport, et plus.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://cobra369.github.io">
+  <meta property="og:image" content="https://cobra369.github.io/logo1.png">
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="logo.png" type="image/png">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(135deg, #e0f2f1, #ffffff);
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background-color: #00695c;
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    nav {
+      background-color: #004d40;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 15px 0;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 10px 20px;
+      font-weight: 700;
+      transition: color 0.3s ease;
+      cursor: pointer;
+    }
+    nav a:hover {
+      color: #b2dfdb;
+    }
+    .hero {
+      padding: 80px 20px 40px;
+      text-align: center;
+      background: url('https://images.unsplash.com/photo-1588776814546-ec4fb5f7f56a') center/cover no-repeat;
+      color:black;
+    }
+    img{
+        width: 200px;
+       height: auto;
+    }
+    .hero h1 {
+      font-size: 2.5em;
+      margin-bottom: 15px;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    }
+    .hero p {
+      font-size: 1.2em;
+      max-width: 600px;
+      margin: auto;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    }
+    .intro, .treatments, .testimonials, .comments-section {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 20px;
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    }
+    .treatments h2, .intro h2, .testimonials h2, .comments-section h2 {
+      color: #00695c;
+      margin-bottom: 10px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    table th, table td {
+      padding: 15px;
+      border: 1px solid #ccc;
+      text-align: left;
+    }
+    form {
+      margin-top: 30px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    form input, form textarea, form select, form button {
+      padding: 12px;
+      font-size: 1em;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    form textarea {
+      grid-column: span 2;
+      resize: vertical;
+    }
+    form button {
+      grid-column: span 2;
+      background-color: #00796b;
+      color: white;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    form button:hover {
+      background-color: #004d40;
+    }
+    .comment-box {
+      margin-top: 20px;
+      border-top: 1px solid #ccc;
+      padding-top: 10px;
+    }
+    .comment {
+      margin-bottom: 15px;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+    }
+    .comment h4 {
+      margin: 0;
+      font-weight: bold;
+    }
+    .comment p {
+      margin: 5px 0;
+    }
+    footer {
+      background-color: #004d40;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 60px;
+    }
+  </style>
+  <script>
+    function submitComment(event) {
+      event.preventDefault();
+      
+      const name = document.querySelector('input[name="name"]').value;
+      const email = document.querySelector('input[name="email"]').value;
+      const comment = document.querySelector('textarea[name="comment"]').value;
+      const rating = document.querySelector('select[name="rating"]').value;
+
+      if (name && email && comment) {
+        const commentSection = document.getElementById('comments-list');
+        
+        const newComment = document.createElement('div');
+        newComment.classList.add('comment');
+        
+        newComment.innerHTML = `
+          <h4>${name} (Rating: ${rating}/5)</h4>
+          <p>${comment}</p>
+        `;
+        
+        commentSection.appendChild(newComment);
+
+        document.querySelector('form').reset();
+      } else {
+        alert("Veuillez remplir tous les champs.");
+      }
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Avicenne International Assistance Médicale</h1>
+  </header>
+  <nav>
+    <a href="#about">À propos</a>
+    <a href="services.html">Nos Services</a>
+    <a href="#comments">Commentaires</a>
+    <a href="contact.html">Contact</a>
+    <a href="rendezvous.html">Rendez-vous</a>
+  </nav>
+  <section class="hero">
+    <img src="logo1.png" type="Logo Avicenne International Assistance Médicale">
+    <h1>Bienvenue chez Avicenne</h1>
+  </section>
+  <section class="intro" id="about">
+    <h2>Qui sommes-nous ?</h2>
+    <p>
+      Chez <strong>Avicenne International Assistance Médicale</strong>, nous offrons des services médicaux et esthétiques complets en agissant comme un <strong>intermédiaire entre les patients et les centres médicaux ou esthétiques agréés</strong>, en Tunisie et à l’international.
+    </p>
+    <p>
+      Nous assurons un accompagnement personnalisé et professionnel à travers :
+    </p>
+    <ul>
+      <li>La mise à disposition de logements selon les besoins des patients</li>
+      <li>La possibilité de fournir une <strong>ambulance</strong> en cas de nécessité</li>
+      <li>L’organisation de <strong>moyens de transport confortables et sûrs</strong></li>
+      <li>La facilitation du lien entre les patients et les établissements médicaux ou esthétiques adaptés à leur profil et à leur budget</li>
+    </ul>
+    <p>
+      Notre mission est de garantir <strong>rapidité, fiabilité et qualité de service</strong> pour un parcours de soin en toute sérénité.
+    </p>
+  </section>
+  <section class="comments-section" id="comments">
+    <h2>Laissez votre commentaire et évaluation</h2>
+    <form onsubmit="submitComment(event)">
+      <input type="text" name="name" placeholder="Votre nom" required>
+      <input type="email" name="email" placeholder="Votre adresse e-mail" required>
+      
+      <label for="rating">Votre évaluation :</label>
+      <select name="rating" id="rating" required>
+        <option value="1">1 - Excellent</option>
+        <option value="2">2 - Bon</option>
+        <option value="3">3 - Moyen</option>
+        <option value="4">4 - Mauvais</option>
+        <option value="5">5 - Très mauvais</option>
+      </select>
+      
+      <textarea name="comment" rows="5" placeholder="Votre commentaire..." required></textarea>
+      <button type="submit">Envoyer le commentaire</button>
+    </form>
+
+    <div id="comments-list" class="comment-box">
+    </div>
+  </section>
+  <footer>
+    &copy; 2025 Avicenne International Assistance Médicale. Tous droits réservés.
+  </footer>
+</body>
+</html>

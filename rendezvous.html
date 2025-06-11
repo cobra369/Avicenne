@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Prendre un Rendez-vous</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(to right, #e0f7fa, #ffffff);
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #00695c;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 40px auto;
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: #00695c;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    input, textarea, select, button {
+      padding: 12px;
+      font-size: 1em;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    button {
+      background-color: #00796b;
+      color: white;
+      border: none;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #004d40;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #004d40;
+      color: white;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Avicenne International Assistance Médicale</h1>
+</header>
+
+<div class="container">
+  <h2>Prendre un Rendez-vous</h2>
+  <form action="https://formspree.io/f/xgvywqow" method="POST">
+    <input type="text" name="name" placeholder="Votre nom complet" required />
+    <input type="email" name="email" placeholder="Votre adresse e-mail" required />
+    <input type="tel" name="phone" placeholder="Votre numéro de téléphone" required />
+    <select name="service" required>
+      <option value="">Choisissez un service</option>
+      <option value="consultation médicale">Consultation médicale</option>
+      <option value="soin esthétique">Soin esthétique</option>
+      <option value="transport sanitaire">Transport sanitaire</option>
+    </select>
+    <textarea name="message" rows="4" placeholder="Des remarques ou besoins particuliers ?"></textarea>
+    <button type="submit">Envoyer</button>
+  </form>
+</div>
+
+<footer>
+  &copy; 2025 Avicenne International Assistance Médicale. Tous droits réservés.
+</footer>
+
+</body>
+</html>
+
+</body>
+</html>
